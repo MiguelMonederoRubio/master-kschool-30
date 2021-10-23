@@ -1,0 +1,57 @@
+mkdir first_dir
+mkdir first_dir/text_file.txt
+ls
+mkdir -p first_dir/sub1/sub2/text_file 
+ls first_dir
+ls first_dir_text_file.txt
+ls first_dir/
+touch first_dir/text_file.txt
+ls -l first_dir
+chmod 676 first_dir/text_file.txt
+ls -l first_dir
+rm -r first_dir/text_file
+cp first_dir/text_file.txt first_dir/sub1
+ls first_dir/
+ls first_dir/sub1
+cp first_dir/text_file.txt first_dir/sub1
+clear
+git
+mkdir repos
+cd repos
+git config --global user.name "Miguel Monedero"
+git config --global user.email miguelmonedero1996@gmail.com
+git clone https://github.com/MiguelMonederoRubio/master-kschool-30.git
+cd master-kschool-30
+ls
+cat README.md
+git diff
+git add README.md
+git status
+git commit
+git push
+clear
+echo $0
+bash
+sudo apt install gedit
+ll -a
+gedit .zshrc
+echo $EDITOR
+echo $0
+clear
+zsh
+echo $EDITOR
+ll -a
+cat .history
+history
+history -30
+cd repos
+cd master-kschool-30
+git remote -v
+cat .gitconfig
+clear
+cat .gitconfig
+cd
+cat .gitconfig
+cd -
+git status
+cp /home/dsc/.history .
