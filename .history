@@ -158,3 +158,88 @@ head -1 optd_por_public.csv | tr "^" "\n" | wc -l
 cd repos/master-kschool-30
 git status
 cp ~/.history . 
+git add -u
+git status
+git commit -m "update history file"
+cd
+cd data/shell
+cat Test_example.txt
+cat Text_example.txt
+grep this Text_example.txt
+grep -n this Text_example.txt
+grep -n empty Text_example.txt
+grep -nB 1 empty Text_example.txt
+grep -nA 1 empty Text_example.txt
+grep -nC 1 empty Text_example.txt
+grep -n empty Finn.txt Text_example.txt uniq_example.txt 
+grep -n -E "^T" Text_example.txt 
+grep -n "^T" Text_example.txt 
+echo Sunday | sed ssdaysnights
+echo Sunday | sed 's/day/night/'
+echo.day.day | sed 's/day/night/'
+echo day.day | sed 's/day/night/'
+echo day.day | sed 's/day/night/g'
+echo day.day | sed 's/day/night/gi'
+cat Text_example.txt| sed 's/this/THAT/gi'
+cp Text_example.txt Text_example_copy.txt
+sed -i 's/this/THAT/gi' Text_example_copy.txt
+cat Text_example_copy.txt
+seq 10 15
+seq 10 15 | sed '/13/d'
+seq 10 15 | sed '3d'
+seq 10 15 | sed '3!d'
+seq 10 15 >raw
+cat raw
+cat -n raw
+cat raw| sed '5!d'
+cat raw| sed '5!d' > linea_con_problema.txt
+cat raw| sed '5d' > linea_sin_problema.txt
+cat raw| sed '5d' > lineas_sin_problema.txt
+cat lineas_sin_problema.txt
+rm linea_sin_problema.txt
+cat lineas_sin_problema.txt
+cd ../opentraveldata
+csvlook -d "^" optd_aircraft.csv
+csvlook -d "^" optd_aircraft.csv | less
+csvlook -d "^" optd_aircraft.csv | less - S
+csvlook -ld "^" optd_aircraft.csv | less - S
+csvstat -ld "^" optd_aircraft.csv | less - S
+head -100 | csvstat -d "^" optd_aircraft.csv | less - S
+head -100 optd_por_public.csv | csvstat -d "^" | less -S
+csvstat -d "^" -c manufacturer optd_aircraft.csv
+csvcut -d "^" -c manufacturer optd_aircraft.csv | head
+csvcut -d "^" -c 1-3 optd_aircraft.csv | head
+csvcut -d "^" -c 1-3 optd_aircraft.csv | csvstat -d ","
+csvgrep -d "^" -c iata_code -m 380 optd_aircraft.csv
+csvsql -d "^" optd_aircraft.csv
+csvsql -d "^" -i postgresql optd_aircraft.csv
+csvsql -d "^" -i oracle optd_aircraft.csv > sql_command.txt
+zip text_files.zip first_10_lines.txt largest_file.txt linea_num_10.txt sql_command.txt 
+ll
+zipinfo text_files.zip
+zcat text_files.zip
+gzip first_10_lines.txt largest_file.txt linea_num_10.txt sql_command.txt 
+ll
+zcat largest_file.txt.gz
+ll
+zgrep This linea_num_10.txt.gz
+gunzip first_10_lines.txt.gz largest_file.txt.gz linea_num_10.txt.gz optd_aircraft.csv optd_aircraft_delimitador_nuevo.csv optd_airlines.csv optd_por_public.csv ref_airline_nb_of_flights.csv sql_command.txt.gz text_files.zip 
+ll
+bzip2 optd_aircraft.csv optd_aircraft_delimitador_nuevo.csv optd_airlines.csv optd_por_public.csv ref_airline_nb_of_flights.csv 
+ll
+bunzip optd_aircraft.csv.bz2 optd_aircraft_delimitador_nuevo.csv.bz2 optd_airlines.csv.bz2 optd_por_public.csv.bz2 ref_airline_nb_of_flights.csv.bz2 
+ll
+bz2unzip optd_aircraft.csv.bz2 optd_aircraft_delimitador_nuevo.csv.bz2 optd_airlines.csv.bz2 optd_por_public.csv.bz2 ref_airline_nb_of_flights.csv.bz2 
+bzunzip optd_aircraft.csv.bz2 optd_aircraft_delimitador_nuevo.csv.bz2 optd_airlines.csv.bz2 optd_por_public.csv.bz2 ref_airline_nb_of_flights.csv.bz2 
+bunzip2 optd_aircraft.csv.bz2 optd_aircraft_delimitador_nuevo.csv.bz2 optd_airlines.csv.bz2 optd_por_public.csv.bz2 ref_airline_nb_of_flights.csv.bz2 
+ll
+tar -czvf opentraveldata
+tar -czvf opentraveldata optd_aircraft.csv optd_aircraft_delimitador_nuevo.csv optd_airlines.csv optd_por_public.csv ref_airline_nb_of_flights.csv 
+tar -cjvf opentraveldata optd_aircraft.csv optd_aircraft_delimitador_nuevo.csv optd_airlines.csv optd_por_public.csv ref_airline_nb_of_flights.csv 
+tar -xvf opentraveldata.tar
+tar -xvf opentraveldata
+ll
+cd
+cd repos/master-kschool-30
+ll
+cp ~/.history .
